@@ -4,18 +4,18 @@ An implementation of the Dijkstra graph search algorithm that finds the shortest
 ## Install and Run
 Download the repository from GitHub. Open Terminal and ```cd``` into the local directory. 
 To search for the shortest path between Boston and Berkley, type 
-```
-python dijkstra.py < tests/0boston_berkeley.in
-```
+
+> python dijkstra.py < tests/0boston_berkeley.in
+
 To generate a kml file containing the shortest path between Boston and Berkely, type 
-```
-TRACE=kml python dijkstra.py < tests/0boston_berkeley.in
-```
+
+> TRACE=kml python dijkstra.py < tests/0boston_berkeley.in
+
 A .kml file will be generated in the local directory. These .kml files can be visualized in [Google My Maps](https://www.google.com/maps/d/u/0/). A sample map can be viewed [here](https://drive.google.com/open?id=1ibJ7-uEdVi08QoRTPhq4o01nExs&usp=sharing). Other possible routes to search can be found in the ```tests/``` directory.
 To test the program, type 
-```
-python dijkstra_test.py
-``` 
+
+> python dijkstra_test.py
+
 This tests the algorithm on four preset routes.
 
 ## Implementation
