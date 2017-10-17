@@ -195,27 +195,34 @@ class PathFinder(object):
             A tuple: (the path as a list of nodes from source to destination, 
                       the number of visited nodes)
         """
-        # instantiate priority queue
+        
         num_visited = 0
         
-        
+        # instantiate set of node vertices
         for node in nodes:
             node.parent = None
             node.queue_key = None
         
+        # instantiate source node with distance 0
         source.queue_key = NodeDistancePair(source, 0)
         source.parent = None
         
+        # instantiate min-heap priority queue with source node
         heapq = PriorityQueue()
         heapq.insert(source.queue_key)
         
+        # while nodes are contained in the min-heap
         while len(heapq) > 0:
+            
+            # extract the node with the minimum key
             node_key = heapq.extract_min()
             node, dist = node_key.node, node_key.distance
             num_visited += 1
             
+            # if we have discovered the shortest path to the destination
             if node is destination: break
             
+            # relax all adjacent nodes 
             for v in node.adj:
                 v_dist = weight(node, v) + dist
                 if v.queue_key is None:
@@ -230,13 +237,12 @@ class PathFinder(object):
         path = []
        
         
+        # follow shortest path back from destination
         while destination is not None:
             path.insert(0, destination)
-            
             destination = destination.parent
             
-                  
-            
+                    
         return (path, num_visited) 
         
     @staticmethod
