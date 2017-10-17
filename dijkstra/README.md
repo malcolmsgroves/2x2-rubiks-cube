@@ -11,7 +11,7 @@ To generate a kml file containing the shortest path between Boston and Berkely, 
 ```
 TRACE=kml python dijkstra.py < tests/0boston_berkeley.in
 ```
-A .kml file will be generated in the local directory. These .kml files can be visualized in [Google My Maps](mymaps.google.com). A sample map can be viewed [here](https://drive.google.com/open?id=1ibJ7-uEdVi08QoRTPhq4o01nExs&usp=sharing). Other possible routes to search can be found in the ```tests/``` directory.
+A .kml file will be generated in the local directory. These .kml files can be visualized in [Google My Maps](https://www.google.com/maps/d/u/0/). A sample map can be viewed [here](https://drive.google.com/open?id=1ibJ7-uEdVi08QoRTPhq4o01nExs&usp=sharing). Other possible routes to search can be found in the ```tests/``` directory.
 To test the program, type 
 ```
 python dijkstra_test.py
