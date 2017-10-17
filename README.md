@@ -3,3 +3,6 @@ This directory contains exercises from the MIT 6.006 Fall 2011 *Introduction to 
 
 ## 2 x 2 Rubik's Cube
 Solves a 2 x 2 rubik's cube using a two-source breadth-first search (BFS) that starts at the start and end configurations. If n moves are required to solve the rubik's cube, the two-source BFS implementation runs in O(5<sup>n/2</sup>) time while the single source implementation would run in O(5<sup>n</sup>) time.
+
+## Shortest Path
+Discovers the shortest path on roads between two locations in the United States using Dijkstra's algorithm for directed acyclic graphs (DAGs). Given a set of nodes V and a set of edges E, the runtime for this program is O(|E| + |V| * log|V|). The priority queue is implemented with a min-heap that maps keys to indices so that the *decrease_key* operation is O(log*n*) and the *extract_min* operation is O(1).
