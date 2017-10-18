@@ -6,3 +6,6 @@ Solves a 2 x 2 rubik's cube using a two-source breadth-first search (BFS) that s
 
 ## Shortest Path
 Discovers the shortest path on roads between two locations in the United States using Dijkstra's algorithm for directed acyclic graphs (DAGs). Given a set of nodes V and a set of edges E, the runtime for this program is O(|E| + |V| * log|V|). The priority queue is implemented with a min-heap that maps keys to indices so that the *decrease_key* operation is O(log*n*) and the *extract_min* operation is O(1).
+
+## Text Justification
+Prints a .txt file to the console with optimized justification. The "badness" of each line is equal to (PAGE_WIDTH - *line_length*)<sup>3</sup> if *line_length* <= PAGE_WIDTH and infinity otherwise. The total "badness" is optimized using a dynamic programming strategy that runs in O(n<sup>2</sup>) time.
